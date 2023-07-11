@@ -1,14 +1,2 @@
 #!/bin/bash
-
-count=0
-
-# Traverse all directories and subdirectories, excluding the current and parent directories
-find . -mindepth 1 -type d | while read -r dir; do
-    # Exclude the current and parent directories
-    if [[ "$dir" != "." && "$dir" != ".." ]]; then
-        ((count++))
-    fi
-done
-
-echo "Total directories: $count"
-
+find -type d ! -path -print | wc -l
