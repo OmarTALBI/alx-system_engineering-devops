@@ -2,5 +2,5 @@
 filename='\*\\'"Best School"'\\*$\?\*\*\*\*\*:)'
 content="Best School"
 
-echo -e "Best School"  > "$filename"
+echo -e "$content" > "$filename""
 
